@@ -52,3 +52,4 @@ while continuer:
     elif year < 1982:
         print("Vous ne pouvez pas etres admis car vous avez plus de 40ans\n ")
         print(f"{nom} {prenom} née en {year} n'est pas admis\nadresse mail {mail}\n")
+        
