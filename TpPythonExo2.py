@@ -19,8 +19,15 @@ def verif_mail_long(adresse):
                 return False
     return True
 
-continuer = True
-while continuer:
+def verif_year(annee):
+    if year[4]:
+        return false
+
+
+nbr = int(input("Combien de personne voulez vous inscrire?\n"))
+#continuer = True
+#while continuer:
+for i in range(nbr):
     nom = input("indiquez votre nom\n")
     prenom = input("indiquez votre prenom\n")
     year = input("indiquez votre année de naissance\n")
@@ -52,3 +59,4 @@ while continuer:
     elif year < 1982:
         print("Vous ne pouvez pas etres admis car vous avez plus de 40ans\n ")
         print(f"{nom} {prenom} née en {year} n'est pas admis\nadresse mail {mail}\n")
+print(f"Vous avez inscrit {nbr} de personnes")
