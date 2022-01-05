@@ -22,6 +22,7 @@ def verif_mail_long(adresse):
 def verif_year(annee):
     if year[4]:
         return false
+    
 
 
 nbr = int(input("Combien de personne voulez vous inscrire?\n"))
