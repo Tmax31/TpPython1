@@ -20,9 +20,18 @@ def verif_mail_long(adresse):
     return True
 
 def verif_year(annee):
-    if year[4]:
-        return false
-    
+    rex = re.compile("[0-9]")
+    if rex.match(annee):
+        return True
+    else:
+        print("Vous devez indiquez seulement des chiffres")
+        return False
+
+def verif_year_long(annee):
+    for ind in enumerate(annee):
+        if (ind == 4):
+            print("ccceee")
+    return True
 
 
 nbr = int(input("Combien de personne voulez vous inscrire?\n"))
@@ -32,13 +41,19 @@ for i in range(nbr):
     nom = input("indiquez votre nom\n")
     prenom = input("indiquez votre prenom\n")
     year = input("indiquez votre année de naissance\n")
-    mail = input("indiquez votre adresse mail\n")
     try:
         year = int(year)
     except ValueError:
-        print("veuillez indiquer l'année en chiffres")
+        #print("veuillez indiquer l'année en chiffres\n")
+        year = input("Veuillez indiquer l'année en chiffres\n")
     else:
         continuer = False
+
+    longueur_year = len(str(year))
+    if len(str(year)) != 4:
+        year = input("Veuillez indiquer un chiffre de 4 caractères\n")
+
+    mail = input("indiquez votre adresse mail\n")
 
     if year > 2016:
         print("Vous ne pouvez pas etres admis car vous avez moins de 6ans\n")
